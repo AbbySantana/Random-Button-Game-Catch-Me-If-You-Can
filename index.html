@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<html>
+  <head>
+    <style>
+      #pulsa {
+        position: absolute;
+      }
+    </style>
+    <script>
+     window.onload = function() {
+        var button = document.getElementById("pulsa");
+        button.addEventListener("mouseover", function() {
+          var x = Math.floor(Math.random() * window.innerWidth);
+          var y = Math.floor(Math.random() * window.innerHeight);
+          var directions = ["left", "right", "up", "down"];
+          var direction = directions[Math.floor(Math.random() * directions.length)];
+          button.style.left = x + "px";
+          button.style.top = y + "px";
+          button.style.transition = direction + " 1s";
+        });
+        button.addEventListener("transitionend", function() {
+          alert("Me pillaste!");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button id="pulsa">PULSA</button>
+  </body>
+</html>
