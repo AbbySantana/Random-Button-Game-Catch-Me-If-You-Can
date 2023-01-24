@@ -1,37 +1,28 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddEventListener</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AddEventListener</title>
+  <style>
+    body {
+      background-image: url('parque.webp');
+      cursor: hand;
+    }
+
+    #pulsa {
+      position: absolute;
+      border: none;
+    }
+  </style>
+
 </head>
+
 <body>
-<html>
-  <head>
-    <style>
-      #pulsa {
-        position: absolute;
-      }
-    </style>
-    <script>
-     window.onload = function() {
-        let button = document.getElementById("pulsa");
-        button.addEventListener("mouseover", function() {
-          let x = Math.floor(Math.random() * window.innerWidth);
-          let y = Math.floor(Math.random() * window.innerHeight);
-          let directions = ["left", "right", "up", "down"];
-          let direction = directions[Math.floor(Math.random() * directions.length)];
-          button.style.left = x + "px";
-          button.style.top = y + "px";
-          button.style.transition = direction + " 1s";
-        });
-        button.addEventListener("transitionend", function() {
-          alert("Me pillaste!");
-        });
-      };
-    </script>
-  </head>
-  <body>
-    <button id="pulsa">PULSA</button>
-  </body>
+
+  <button id="pulsa" style="background-color: transparent;"><img src="globo.png" width="200px" height="200px"></button>
+  <script src="function.js" defer></script>
+</body>
+
 </html>
