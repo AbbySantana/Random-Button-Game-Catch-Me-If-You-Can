@@ -1,0 +1,21 @@
+body {
+    background-image: linear-gradient(to right bottom,
+            rgba(190, 190, 190, 0.5),
+            rgba(190, 190, 190, 0.5)),
+        url('parque.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: hand;
+}
+
+#pulsa {
+    position: absolute;
+    border: none;
+}
+
+.menu {
+    position: relative;
+    font-size: larger;
+
+}
